@@ -113,3 +113,8 @@ Submit a repository with:
 - declared models, APIs, licences and source-rights assumptions.
 
 Email the repository URL, run command, models/APIs and expected cost per 100-company run to `submit@builderr.ai`.
+
+## Submission Details
+* **Exact Commit Hash:** 0b42d78a74d3fc90472ffc51e44597c17e2b1864
+* **Execution Command:** `python3 -m scripts.run_competition_batch --organisations <INPUT_PATH> --bulk <BULK_PATH> --output <OUTPUT_PATH> --profiles-output <PROFILES_PATH> --report <REPORT_PATH> --run-id eval-run`
+* **Model/API Details & Expected Costs:** 0 / Free (Uses open Norwegian registry endpoints without API keys)
