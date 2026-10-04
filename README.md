@@ -1,10 +1,22 @@
-# Signalpost: Build An Agent That Finds Company Information
+# Singlepost Agent
 
-Norwegian corporate research agent built for the Signalpost challenge on Unstop / Builderr.
+Automated Norwegian corporate intelligence and web research agent built for the Signalpost/Builderr challenge.
 
-## Submission Details
-* **Exact Commit Hash:** 1ad1d901178d9de3a8e635232f52ba44e6be6fb1
-* **Execution Command:** `python3 -m scripts.run_competition_batch --organisations <INPUT_PATH> --bulk <BULK_PATH> --output <OUTPUT_PATH> --profiles-output <PROFILES_PATH> --report <REPORT_PATH> --run-id eval-run`
-* **Model/API Details & Expected Costs:** 0 / Free (Uses open Norwegian registry endpoints without API keys)
+## Data Sources & APIs
+- **Brønnøysundregistrene (BRREG):** Official Norwegian business registry API.
+- **Exa AI:** Neural web search engine for company website discovery and fallback domain resolution.
+- **OpenAI (`gpt-4o-mini`):** LLM-powered structured fact extraction for social profiles, key leadership, and operational details.
 
-Source code and configuration files are located inside [`signalpost-starter-kit/`](./signalpost-starter-kit).
+## How to Runs
+```bash
+source .venv/bin/activate
+export EXA_API_KEY="your-exa-key"
+export OPENAI_API_KEY="your-openai-key"
+
+python3 -m scripts.run_competition_batch \
+  --organisations tests/fixtures/batch-orgs-1.txt \
+  --bulk data/sample_bulk.csv.gz \
+  --output output.json \
+  --profiles-output profiles.jsonl \
+  --report report.json \
+  --run-id submission-run
