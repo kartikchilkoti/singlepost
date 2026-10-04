@@ -1,7 +1,7 @@
 {
-  "run_id": "smoke-test-1",
-  "started_at": "2026-10-03T04:27:04.419921Z",
-  "completed_at": "2026-10-03T04:27:08.101564Z",
+  "run_id": "smoke-test-eval",
+  "started_at": "2026-10-04T08:29:56.969032Z",
+  "completed_at": "2026-10-04T08:30:00.599908Z",
   "expected_count": 1,
   "emitted_envelopes": 1,
   "resumed_profiles": 0,
@@ -25,8 +25,8 @@
   "operations": {
     "requests": 5,
     "bytes": 3828,
-    "p50_ms": 707,
-    "p95_ms": 869
+    "p50_ms": 691,
+    "p95_ms": 860
   },
   "validation": {
     "passed": true,
